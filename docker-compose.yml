@@ -1,9 +1,9 @@
 version: "3.8"
 
 services:
-  vakiltik-scraper:
+  ksymg:
     build: .
-    env_file:
-      - .env
+    container_name: ksymg_scraper
     volumes:
-      - .:/app
+      - ./data:/app/data  # if your scraper stores outputs
+    restart: unless-stopped
